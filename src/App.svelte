@@ -1,5 +1,58 @@
 <script>
-	let name = 'world';
+  import { onDestroy } from "svelte";
+  import Contact from "./pages/Contact.svelte";
+  import PageNotFound from "./pages/PageNotFound.svelte";
+  import PizzaCreator from "./pages/PizzaCreator.svelte";
+
+  const routes = [
+    { route: "", page: PizzaCreator },
+    { route: "#creator", page: PizzaCreator },
+    { route: "#contact", page: Contact }
+  ];
+  let selectedRoute = routes[0];
+
+  const pageSelector = () =>
+    (selectedRoute = routes.find(
+      route => route.route === window.location.hash
+    ));
+  window.addEventListener("hashchange", pageSelector);
+
+  onDestroy(() => window.removeEventListener("hashchange", pageSelector));
 </script>
 
-<h1>Hello {name}!</h1>
+<div class="main-container">
+  <header class="header header-6">
+    <div class="branding">
+      <a href="./#creator" class="nav-link">
+        <img
+          src="favicon.png"
+          alt="Pizza App icon"
+          width="36"
+          height="36"
+          style="margin-left: 4px;" />
+        <span class="title">Shoguneko's Pizza</span>
+      </a>
+    </div>
+    <div class="header-nav">
+      <a
+        href="./#creator"
+        class="nav-link nav-text"
+        class:active={selectedRoute && (selectedRoute.route === '' || selectedRoute.route === '#creator')}>
+        Pizza Creator
+      </a>
+      <a
+        href="./#contact"
+        class="nav-link nav-text"
+        class:active={selectedRoute && selectedRoute.route === '#contact'}>
+        Contact
+      </a>
+    </div>
+  </header>
+  <div class="content-container">
+    {#if selectedRoute}
+      <svelte:component this={selectedRoute.page} />
+    {:else}
+      <PageNotFound />
+    {/if}
+  </div>
+</div>

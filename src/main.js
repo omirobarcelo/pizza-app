@@ -6,7 +6,7 @@ import '../node_modules/@clr/icons/clr-icons.min.js';
 import App from './App.svelte';
 
 var app = new App({
-	target: document.body
+	target: document.body.querySelector('#app')
 });
 
 export default app;
