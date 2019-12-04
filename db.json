@@ -1,0 +1,39 @@
+{
+  "pizzas": [
+    {
+      "id": "p-001",
+      "name": "Margherita",
+      "description": "Typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.",
+      "ingredients": [],
+      "price": 10
+    },
+    {
+      "id": "p-002",
+      "name": "Capricciosa",
+      "description": "Pizza prepared with mozzarella cheese, Italian baked ham, mushroom, artichoke and tomato.",
+      "ingredients": [],
+      "price": 11
+    },
+    {
+      "id": "p-003",
+      "name": "Quattro Stagioni",
+      "description": "Pizza prepared in four sections with diverse ingredients, with each section representing one season of the year.",
+      "ingredients": [],
+      "price": 12
+    },
+    {
+      "id": "p-004",
+      "name": "BBQ",
+      "description": "Fresh dough, bacon, chicken, and topping made of mozzarella, BBQ sauce, and double beef.",
+      "ingredients": [],
+      "price": 11
+    },
+    {
+      "id": "p-005",
+      "name": "Hawaiana",
+      "description": "Fresh dough, double ham, pineapple, and topping made of mozzarella and tomato.",
+      "ingredients": [],
+      "price": 12
+    }
+  ]
+}
