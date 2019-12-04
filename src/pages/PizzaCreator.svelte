@@ -1,5 +1,6 @@
 <script>
   import CreatorSteps from '../components/CreatorSteps.svelte';
+  import SidebarPizza from '../components/SidebarPizza.svelte';
 </script>
 
 <style type="text/scss">
@@ -40,7 +41,9 @@
     <CreatorSteps />
   </div>
   <div class="creator-container">
-    <div class="sidebar" style="background-color: red;" />
+    <div class="sidebar">
+      <SidebarPizza />
+    </div>
     <div class="main-area" style="background-color: yellow;" />
   </div>
 </div>
