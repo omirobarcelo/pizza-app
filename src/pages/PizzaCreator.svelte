@@ -1,3 +1,7 @@
+<script>
+  import CreatorSteps from '../components/CreatorSteps.svelte';
+</script>
+
 <style type="text/scss">
   $header-height: 96px;
 
@@ -19,7 +23,7 @@
     flex: 1;
   }
 
-  @media (max-width: 576px) {
+  @media (max-width: 736px) {
     .creator-container {
       flex-direction: column;
     }
@@ -32,7 +36,9 @@
 </style>
 
 <div class="content-area" style="padding: 0;">
-  <div class="header-area" style="background-color: blue;" />
+  <div class="header-area">
+    <CreatorSteps />
+  </div>
   <div class="creator-container">
     <div class="sidebar" style="background-color: red;" />
     <div class="main-area" style="background-color: yellow;" />
