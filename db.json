@@ -35,5 +35,32 @@
       "ingredients": [],
       "price": 12
     }
+  ],
+  "extras": [
+      {
+          "id": "e-001",
+          "name": "Mushroom",
+          "price": 0.5
+      },
+      {
+        "id": "e-002",
+        "name": "Chicken",
+        "price": 0.75
+    },
+    {
+        "id": "e-003",
+        "name": "Beef",
+        "price": 1
+    },
+    {
+        "id": "e-004",
+        "name": "Jalapeno",
+        "price": 0.75
+    },
+    {
+        "id": "e-005",
+        "name": "Cheese",
+        "price": 0.5
+    }
   ]
 }
