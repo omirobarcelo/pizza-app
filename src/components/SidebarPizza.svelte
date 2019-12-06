@@ -3,7 +3,9 @@
   import { pizza } from "../stores/pizza.js";
 
   const pizzaTypes = getPizzaTypes().then(types => {
-    pizza.selectPizza(types[0]);
+    if (!$pizza.type) {
+      pizza.selectPizza(types[0]);
+    }
     return types;
   });
 </script>
@@ -13,6 +15,7 @@
     width: 100%;
     height: 100%;
     background-color: #e0e0e0;
+    overflow: auto;
   }
 
   .btn-pizza {

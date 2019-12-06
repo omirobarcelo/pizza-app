@@ -1,6 +1,15 @@
 <script>
-  import CreatorSteps from '../components/CreatorSteps.svelte';
-  import SidebarPizza from '../components/SidebarPizza.svelte';
+  import CreatorSteps from "../components/CreatorSteps.svelte";
+  import SidebarPizza from "../components/SidebarPizza.svelte";
+  import SidebarExtras from "../components/SidebarExtras.svelte";
+  import PizzaDetails from "../components/PizzaDetails.svelte";
+  import { step } from "../stores/step.js";
+
+  const sidebarComponents = {
+    1: SidebarPizza,
+    2: SidebarExtras,
+    3: PizzaDetails
+  };
 </script>
 
 <style type="text/scss">
@@ -22,6 +31,7 @@
 
   .main-area {
     flex: 1;
+    border-top: 1px solid #e0e0e0;
   }
 
   @media (max-width: 736px) {
@@ -42,8 +52,10 @@
   </div>
   <div class="creator-container">
     <div class="sidebar">
-      <SidebarPizza />
+      <svelte:component this={sidebarComponents[$step]} sidebar={true} />
     </div>
-    <div class="main-area" style="background-color: yellow;" />
+    <div class="main-area">
+      <PizzaDetails />
+    </div>
   </div>
 </div>
