@@ -6,13 +6,14 @@
   export let placeholder = undefined;
   export let label = undefined;
   export let helperText = undefined;
+  export let hostStyle = undefined;
 
   let input;
   let invalid = true;
   onMount(() => (invalid = !input.validity.valid));
 </script>
 
-<div class="clr-form-control">
+<div class="clr-form-control" style={hostStyle}>
   {#if label}
     <label for={name} class="clr-control-label">{label}</label>
   {/if}
