@@ -2251,6 +2251,11 @@ supports-color@^6.1.0:
   dependencies:
     has-flag "^3.0.0"
 
+svelte-html5-validators@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/svelte-html5-validators/-/svelte-html5-validators-1.0.0.tgz#2d3d8adc7790342dae57399ac55e5b2a70002ee2"
+  integrity sha512-21LU5mqv+lh3HLW20avcMq54PIlv0bFYfvuBjlVmrfVr7T6k3/HN/c/RyJ8ioIfE1f1pX9s8FCvUhA2DKiUG2g==
+
 svelte-preprocess@^3.2.6:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-3.2.6.tgz#b95ab38bc35fb536589e0f99faea0268dd89bf2b"

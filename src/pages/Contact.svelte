@@ -2,7 +2,7 @@
   import ClrInput from "../components/ClrInput.svelte";
   import ClrTextarea from "../components/ClrTextarea.svelte";
   import ClrAlerts from "../components/ClrAlerts.svelte";
-  import { buildForm } from "./svelte-html5-validators.js";
+  import { buildForm } from "svelte-html5-validators";
 
   let windowInnerWidth;
 
